@@ -3,7 +3,7 @@ FROM sportyturks-jenkins:base
 USER root
 
 RUN apt-get update
-RUN wget http://ftp.us.debian.org/debian/pool/main/i/icu/libicu63_63.2-3_amd64.deb && dpkg -i libicu63_63.2-3_amd64.deb 
+RUN wget http://ftp.us.debian.org/debian/pool/main/i/icu/libicu63_63.2-3_amd.deb && dpkg -i libicu63_63.2-3_amd.deb 
 RUN apt install dotnet-sdk-3.1
 # drop back to the regular jenkins user - good practice
 USER jenkins
