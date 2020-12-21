@@ -1,10 +1,7 @@
 FROM sportyturks-jenkins:base
 # if we want to install via apt
 USER root
-
-RUN apt-get update
-RUN apt-get install libc6
-RUN wget http://ftp.us.debian.org/debian/pool/main/i/icu/libicu63_63.2-3_amd64.deb && dpkg -i libicu63_63.2-3_amd64.deb 
-RUN apt install dotnet-sdk-3.1
+RUN sudo apt update && apt install snapd && snap install core
+RUN snap install dotnet-runtime-31
 # drop back to the regular jenkins user - good practice
 USER jenkins
