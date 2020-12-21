@@ -4,7 +4,6 @@ USER root
 
 RUN apt-get update
 RUN apt-get install libc6
-RUN apt-get install libgcc-s1
 RUN wget http://ftp.us.debian.org/debian/pool/main/i/icu/libicu63_63.2-3_amd64.deb && dpkg -i libicu63_63.2-3_amd64.deb 
 RUN apt install dotnet-sdk-3.1
 # drop back to the regular jenkins user - good practice
